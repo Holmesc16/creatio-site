@@ -7,6 +7,7 @@
 		"start": "webpack-dev-server --env.NODE_ENV=development --mode=development --port 4000",
 		"dev": "webpack-dashboard -- webpack-dev-server --env.NODE_ENV=development --mode=development --port 4000",
 		"build": "webpack --env.NODE_ENV=production --mode=production",
+		"now-build": "webpack --env.NODE_ENV=production --mode=production",
 		"stats": "webpack --stats --json --env.NODE_ENV=production --mode=production > stats.json && npx webpack-bundle-analyzer ./stats.json"
 	},
 	"repository": {
