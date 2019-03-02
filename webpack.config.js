@@ -28,8 +28,9 @@ module.exports = env => {
 	const isProduction = env.NODE_ENV === 'production'
 	const PUBLIC_PATH = '/'
 	return {
+		mode: isProduction ? 'production' : 'development',
 		entry: {
-			app: ['@babel/polyfill', './src/index.js'],
+			app: ['./src/index.js'],
 		},
 		output: {
 			filename: '[name]-[hash].bundle.js',
