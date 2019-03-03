@@ -2,15 +2,6 @@ import s from 'styled-components'
 
 import colors from 'app/constants/colors'
 
-export const StyledContent = s.div`
-	display: flex;
-	flex-direction: column;
-	padding: 50px;
-	background-color: white;
-	border-radius: 5px;
-	box-shadow: 4px 2px ${colors.secondary[0]};
-`
-
 export const StyledH1 = s.h1`
 	font-size: 4em;
 	font-weight: bold;
@@ -45,6 +36,7 @@ export const StyledSearchBar = s.input`
 	border-right: none;
 	font-size: 1.5em;
 	padding-left: 20px;
+	z-index:1;
 
 	&::placeholder {
 		color: lightgrey;
@@ -57,4 +49,27 @@ export const StyledSearchButton = s.button`
 	border-radius: 0 8px 8px 0;
 	height: 50px;
 	border-width: 2px;
+`
+export const StyledSearchHelper = s.div`
+width: 100%;
+height: 35px;
+line-height: 33px;
+border-width: 2px;
+border-radius: 8px 0 0 8px;
+border-color: #0A6C74;
+border-right: none;
+font-size: 1.1em;
+border-radius: 0 0 25px 25px;
+padding-left: 20px;
+background-color: #eee;
+position: absolute;
+width: 92%;
+font-style: italic;
+color: #999;
+max-height: ${props => props.isActive ? '35px' : '0'};
+transition: max-height .5s;
+overflow-y: hidden;
+top: 55px;
+left: 0;
+margin-top: -2px;
 `
