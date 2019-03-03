@@ -6,6 +6,8 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
 	.BundleAnalyzerPlugin
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const { GenerateSW } = require('workbox-webpack-plugin')
 const webpack = require('webpack')
 
 const getStyleRule = (isProduction, cssOptions, extraLoaders) => {
@@ -26,7 +28,7 @@ const getStyleRule = (isProduction, cssOptions, extraLoaders) => {
 
 module.exports = env => {
 	const isProduction = env.NODE_ENV === 'production'
-	const PUBLIC_PATH = '/'
+	const PUBLIC_PATH = ''
 	return {
 		mode: isProduction ? 'production' : 'development',
 		entry: {
@@ -67,6 +69,30 @@ module.exports = env => {
 				}),
 				isProduction ? new MiniCssExtractPlugin() : null,
 				!isProduction ? new webpack.HotModuleReplacementPlugin() : null,
+				isProduction
+					? new CopyWebpackPlugin([
+							{
+								from: 'public/**/*',
+								flatten: true,
+								ignore: 'index.html',
+							},
+					  ])
+					: null,
+				isProduction
+					? new GenerateSW({
+							clientsClaim: true,
+							exclude: [/\.map$/, /asset-manifest\.json$/],
+							importWorkboxFrom: 'cdn',
+							navigateFallback: PUBLIC_PATH + '/index.html',
+							navigateFallbackBlacklist: [
+								// Exclude URLs starting with /_, as they're likely an API call
+								new RegExp('^/_'),
+								// Exclude URLs containing a dot, as they're likely a resource in
+								// public/ and not a SPA route
+								new RegExp('/[^/]+\\.[^/]+$'),
+							],
+					  })
+					: null,
 			].filter(p => p)
 		})(),
 		module: {
