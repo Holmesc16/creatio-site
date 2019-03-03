@@ -16,6 +16,7 @@ import UserGroupIcon from 'app/components/icons/icon-user-group'
 import SearchIcon from 'app/components/icons/icon-search'
 import colors from 'app/constants/colors'
 import Row from 'app/components/ui/Row'
+import Logo from 'app/assets/logo.svg'
 
 const valuePropositionIconOptions = {
 	primary: colors.secondary[3],
@@ -28,7 +29,7 @@ const LandingPage = ({ isActive, setIsActive }) => {
 
 	return (
 		<StyledContent>
-			<StyledH1>Creatio</StyledH1>
+			<img src={Logo}/>
 			<StyledValueProposition>
 				<li>
 					<FactoryIcon {...valuePropositionIconOptions} />
