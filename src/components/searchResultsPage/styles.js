@@ -1,27 +1,23 @@
 import s from "styled-components";
-
 import colors from "app/constants/colors";
 
-export const LandingPage = s.div`
-	display: flex;
-	align-items: center;
-	height: 100vh;
-`;
-
-export const StyledContent = s.div`
+export const SearchResultsPage = s.div`
 	display: flex;
 	flex-direction: column;
-	padding: 50px;
+	padding: 16px;
 	background-color: white;
 	border-radius: 5px;
-	box-shadow: 4px 2px ${colors.secondary[0]};
+	box-shadow: 4px 4px ${colors.secondary[0]};
+	justify-content: flex-start;
+	max-width: 800px;
+	width: 100%;
 `;
 
 export const StyledH1 = s.h1`
-	font-size: 4em;
+	font-size: 2em;
 	font-weight: bold;
 	color: ${colors.primary[0]};
-	margin-bottom: 50px;
+	margin-bottom: 16px;
 `;
 
 export const StyledValueProposition = s.ul`
@@ -49,7 +45,7 @@ export const StyledSearchBar = s.input`
 	border-radius: 8px 0 0 8px;
 	border-color: ${colors.primary[0]};
 	border-right: none;
-	font-size: 1.5em;
+	font-size: 1em;
 	padding-left: 20px;
 
 	&::placeholder {
@@ -62,5 +58,20 @@ export const StyledSearchButton = s.button`
 	border-color: ${colors.primary[0]};
 	border-radius: 0 8px 8px 0;
 	height: 50px;
+	padding: 8px;
 	border-width: 2px;
+	& svg {
+		height: 100%;
+	}
+`;
+
+export const Divider = s.div`
+	height: 1px;
+	background-color: rgba(0,0,0,0.15);
+	margin: 16px 0;
+`;
+
+export const NoResultsText = s.p`
+	font-size: 1.25em;
+	color: grey;
 `;

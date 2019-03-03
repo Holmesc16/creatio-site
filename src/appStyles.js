@@ -1,20 +1,19 @@
-import s from 'styled-components'
+import s from "styled-components";
 
-import colors from 'app/constants/colors'
-import spaceBackground from 'app/assets/space-bkgrnd.jpg'
+import colors from "app/constants/colors";
+import spaceBackground from "app/assets/space-bkgrnd.jpg";
 
 export const StyledContainer = s.div`
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	height: 100%;
-	width: 100%;
 	flex-direction: column;
 	background-image: url(${spaceBackground});
 	background-size: cover;
-
+	padding: 16px;
 	font-family: 'Nanum Gothic', sans-serif;
-`
+`;
 
 // width: 60%;
 // min-width: 1100px;
@@ -25,14 +24,14 @@ export const StyledContent = s.div`
 	background-color: white;
 	border-radius: 5px;
 	box-shadow: 4px 2px ${colors.secondary[0]};
-`
+`;
 
 export const StyledH1 = s.h1`
 	font-size: 4em;
 	font-weight: bold;
 	color: ${colors.primary[0]};
 	margin-bottom: 50px;
-`
+`;
 
 export const StyledValueProposition = s.ul`
 	font-size: 2em;
@@ -50,7 +49,7 @@ export const StyledValueProposition = s.ul`
 	& > li > svg {
 		margin-right: 10px;
 	}
-`
+`;
 
 export const StyledSearchBar = s.input`
 	width: 100%;
@@ -65,7 +64,7 @@ export const StyledSearchBar = s.input`
 	&::placeholder {
 		color: lightgrey;
 	}
-`
+`;
 
 export const StyledSearchButton = s.button`
 	background-color: ${colors.primary[0]};
@@ -73,4 +72,4 @@ export const StyledSearchButton = s.button`
 	border-radius: 0 8px 8px 0;
 	height: 50px;
 	border-width: 2px;
-`
+`;
