@@ -54,7 +54,7 @@ export const StyledSearchHelper = s.div`
 	width: 100%;
     height: 40px;
     line-height: 35px;
-    border-width: 2px;
+    border-width: 2px; 
     border-radius: 8px 0 0 8px;
     border-color: #0A6C74;
     border-right: none;
@@ -66,7 +66,7 @@ export const StyledSearchHelper = s.div`
     width: 92%;
     font-style: italic;
     color: #999;
-	max-height: ${props => props.isActive ? '35px' : '0'};
+	max-height: ${props => (props.isActive ? '35px' : '0')};
     -webkit-transition: max-height .5s;
     transition: max-height .5s;
     overflow-y: hidden;
