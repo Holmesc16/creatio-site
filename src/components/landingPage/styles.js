@@ -52,24 +52,25 @@ export const StyledSearchButton = s.button`
 `
 export const StyledSearchHelper = s.div`
 width: 100%;
-height: 35px;
-line-height: 33px;
-border-width: 2px;
-border-radius: 8px 0 0 8px;
-border-color: #0A6C74;
-border-right: none;
-font-size: 1.1em;
-border-radius: 0 0 25px 25px;
-padding-left: 20px;
-background-color: #eee;
-position: absolute;
-width: 92%;
-font-style: italic;
-color: #999;
-max-height: ${props => props.isActive ? '35px' : '0'};
-transition: max-height .5s;
-overflow-y: hidden;
-top: 55px;
-left: 0;
-margin-top: -2px;
+    height: 40px;
+    line-height: 35px;
+    border-width: 2px;
+    border-radius: 8px 0 0 8px;
+    border-color: #0A6C74;
+    border-right: none;
+    font-size: 1.1em;
+    border-radius: 0 0 25px 25px;
+    padding-left: 20px;
+    background-color: #eee;
+    position: absolute;
+    width: 92%;
+    font-style: italic;
+    color: #999;
+	max-height: ${props => props.isActive ? '35px' : '0'};
+    -webkit-transition: max-height .5s;
+    transition: max-height .5s;
+    overflow-y: hidden;
+    top: 55px;
+    left: 0;
+    margin-top: -5px;
 `
