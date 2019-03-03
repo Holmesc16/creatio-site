@@ -1,7 +1,7 @@
-import s from 'styled-components'
+import styled from 'styled-components'
 
-export default s.div`
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+export default styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 `

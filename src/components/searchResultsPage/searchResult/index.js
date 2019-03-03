@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react'
 
-import { SearchResult, LeftSide, RightSide, CreatioName } from "./styles";
+import { SearchResult, LeftSide, RightSide, CreatioName } from './styles'
 
 export default () => (
   <SearchResult>
@@ -13,4 +13,4 @@ export default () => (
       <div>tags</div>
     </RightSide>
   </SearchResult>
-);
+)

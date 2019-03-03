@@ -1,6 +1,6 @@
-import React from "react";
-import { withProps } from "recompose";
-import map from "lodash/map";
+import React from 'react'
+import { withProps } from 'recompose'
+import map from 'lodash/map'
 
 import {
   SearchResultsPage,
@@ -8,10 +8,11 @@ import {
   StyledSearchBar,
   StyledSearchButton,
   Divider,
-  NoResultsText
-} from "./styles";
-import SearchIcon from "app/components/icons/icon-search";
-import Row from "app/components/ui/Row";
+  NoResultsText,
+} from './styles'
+import SearchIcon from 'app/components/icons/icon-search'
+import Row from 'app/components/ui/Row'
+import SearchResult from './searchResult'
 
 const SearchResultsComponent = ({ searchResults }) => (
   <SearchResultsPage>
@@ -19,22 +20,22 @@ const SearchResultsComponent = ({ searchResults }) => (
     <Row>
       <StyledSearchBar placeholder="Discover templates now!" />
       <StyledSearchButton>
-        <SearchIcon width="2.5rem" primary={"white"} secondary={"none"} />
+        <SearchIcon width="2.5rem" primary={'white'} secondary={'none'} />
       </StyledSearchButton>
     </Row>
     <Divider />
     <div>
       {searchResults.length > 0 ? (
-        map(searchResults, () => <Row>results</Row>)
+        map(searchResults, () => <SearchResult />)
       ) : (
         <NoResultsText>No results found.</NoResultsText>
       )}
     </div>
   </SearchResultsPage>
-);
+)
 
 export default withProps(() => {
   return {
-    searchResults: [1, 2, 3]
-  };
-})(SearchResultsComponent);
+    searchResults: [1, 2, 3],
+  }
+})(SearchResultsComponent)

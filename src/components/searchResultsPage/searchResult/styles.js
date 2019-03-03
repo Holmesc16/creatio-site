@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const SearchResult = styled.div`
   display: flex;
@@ -9,19 +9,19 @@ export const SearchResult = styled.div`
   &:not(:last-child) {
     margin-bottom: 8px;
   }
-`;
+`
 
 export const LeftSide = styled.div`
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-`;
+`
 
 export const RightSide = styled.div`
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   align-items: flex-end;
-`;
+`
 
-export const CreatioName = styled.div``;
+export const CreatioName = styled.div``
