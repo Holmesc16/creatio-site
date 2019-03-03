@@ -24,4 +24,32 @@ export const RightSide = styled.div`
   align-items: flex-end;
 `
 
-export const CreatioName = styled.div``
+export const CreatioName = styled.div`
+  font-size: 1rem;
+  margin-bottom: 4px;
+`
+
+export const RepoName = styled.div`
+  color: grey;
+  font-size: 0.75rem;
+`
+
+export const Stars = styled.div`
+  margin-bottom: 4px;
+`
+
+export const Tags = styled.div`
+  display: flex;
+
+  & span {
+    color: white;
+    background-color: grey;
+    padding: 4px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+  }
+
+  & span:not(:last-child) {
+    margin-right: 4px;
+  }
+`

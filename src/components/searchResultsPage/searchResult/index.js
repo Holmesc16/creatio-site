@@ -1,16 +1,29 @@
 import React from 'react'
+import map from 'lodash/map'
 
-import { SearchResult, LeftSide, RightSide, CreatioName } from './styles'
+import {
+  SearchResult,
+  LeftSide,
+  RightSide,
+  CreatioName,
+  RepoName,
+  Tags,
+  Stars,
+} from './styles'
 
 export default () => (
   <SearchResult>
     <LeftSide>
-      <CreatioName>name</CreatioName>
-      <div>repo</div>
+      <CreatioName>Creatio Name</CreatioName>
+      <RepoName>some-repo-name</RepoName>
     </LeftSide>
     <RightSide>
-      <div>stars</div>
-      <div>tags</div>
+      <Stars>Stars</Stars>
+      <Tags>
+        {map([1, 2, 3], num => (
+          <span>{`tag${num}`}</span>
+        ))}
+      </Tags>
     </RightSide>
   </SearchResult>
 )
