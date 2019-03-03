@@ -51,7 +51,7 @@ export const StyledSearchButton = s.button`
 	border-width: 2px;
 `
 export const StyledSearchHelper = s.div`
-width: 100%;
+	width: 100%;
     height: 40px;
     line-height: 35px;
     border-width: 2px;
