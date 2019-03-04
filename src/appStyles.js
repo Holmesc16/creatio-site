@@ -10,9 +10,8 @@ export const StyledContainer = s.div`
 	height: 100%;
 	width: 100%;
 	flex-direction: column;
-	background-image: url(${spaceBackground});
+	background: linear-gradient(to right top, #044e54, #004753, #004151, #003a4e, #05334a, #113e56, #1d4963, #275570 , #3a7892, #509cb4, #69c3d4, #87eaf2);
 	background-size: cover;
-
 	font-family: 'Nanum Gothic', sans-serif;
 `
 
@@ -24,7 +23,7 @@ export const StyledContent = s.div`
 	padding: 50px;
 	background-color: white;
 	border-radius: 5px;
-	box-shadow: 4px 2px ${colors.secondary[0]};
+	box-shadow: 2px 1px ${colors.secondary[0]};
 `
 
 export const StyledH1 = s.h1`

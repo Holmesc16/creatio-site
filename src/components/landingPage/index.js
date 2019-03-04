@@ -25,8 +25,6 @@ const valuePropositionIconOptions = {
 }
 
 const LandingPage = ({ isActive, setIsActive }) => {
-  console.log({ isActive })
-
   return (
     <StyledContent>
       <img src={Logo} style={{ marginBottom: '40px', marginTop: '-20px' }} />
@@ -54,7 +52,7 @@ const LandingPage = ({ isActive, setIsActive }) => {
           <SearchIcon width="2.5rem" primary={'white'} secondary={'none'} />
         </StyledSearchButton>
         <StyledSearchHelper isActive={isActive}>
-          search examples: "react, vue, _lodash" "progressive web app"
+          search examples: "react, vue, _lodash", "progressive web app",
           "username01-react"
         </StyledSearchHelper>
       </Row>
